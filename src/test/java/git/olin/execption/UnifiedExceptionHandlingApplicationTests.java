@@ -39,8 +39,8 @@ class UnifiedExceptionHandlingApplicationTests {
         BufferedOutputStream bout = new BufferedOutputStream(new FileOutputStream(new File(fileOutputPathName)));
         int b;
         // 将字符输入流中的内容输出出来
-        final byte[] bytes = IoUtil.readBytes(bin, false);
-        log.info("输入的内容：[{}]", new String(bytes, StandardCharsets.UTF_8));
+        //final byte[] bytes = IoUtil.readBytes(bin, false);
+        //log.info("输入的内容：[{}]", new String(bytes, StandardCharsets.UTF_8));
         // 上述的readBytes方法的参数isCloseStream不能为true，否则会提示异常：java.io.IOException: Stream closed；
         // 导致bin.read读取时，流已经被关闭，可以查看readBytes底层方法。
         while ((b = bin.read()) != -1) {
@@ -62,8 +62,8 @@ class UnifiedExceptionHandlingApplicationTests {
             bout = new BufferedOutputStream(new FileOutputStream(new File(fileOutputPathName)));
             int b;
             // 将字符输入流中的内容输出出来
-            final byte[] bytes = IoUtil.readBytes(bin, false);
-            log.info("输入的内容：[{}]", new String(bytes, StandardCharsets.UTF_8));
+            //final byte[] bytes = IoUtil.readBytes(bin, false);
+            //log.info("输入的内容：[{}]", new String(bytes, StandardCharsets.UTF_8));
             // 上述的readBytes方法的参数isCloseStream不能为true，否则会提示异常：java.io.IOException: Stream closed；
             // 导致bin.read读取时，流已经被关闭，可以查看readBytes底层方法。
             while ((b = bin.read()) != -1) {
@@ -102,8 +102,8 @@ class UnifiedExceptionHandlingApplicationTests {
             bout = new BufferedOutputStream(new FileOutputStream(new File(fileOutputPathName)));
             int b;
             // 将字符输入流中的内容输出出来
-            final byte[] bytes = IoUtil.readBytes(bin, false);
-            log.info("输入的内容：[{}]", new String(bytes, StandardCharsets.UTF_8));
+            //final byte[] bytes = IoUtil.readBytes(bin, false);
+            //log.info("输入的内容：[{}]", new String(bytes, StandardCharsets.UTF_8));
             // 上述的readBytes方法的参数isCloseStream不能为true，否则会提示异常：java.io.IOException: Stream closed；
             // 导致bin.read读取时，流已经被关闭，可以查看readBytes底层方法。
             while ((b = bin.read()) != -1) {
@@ -129,8 +129,8 @@ class UnifiedExceptionHandlingApplicationTests {
              BufferedOutputStream bout = new BufferedOutputStream(new FileOutputStream(new File(fileOutputPathName)))) {
             int b;
             // 将字符输入流中的内容输出出来
-            final byte[] bytes = IoUtil.readBytes(bin, false);
-            log.info("输入的内容：[{}]", new String(bytes, StandardCharsets.UTF_8));
+            //final byte[] bytes = IoUtil.readBytes(bin, false);
+            //log.info("输入的内容：[{}]", new String(bytes, StandardCharsets.UTF_8));
             // 上述的readBytes方法的参数isCloseStream不能为true，否则会提示异常：java.io.IOException: Stream closed；
             // 导致bin.read读取时，流已经被关闭，可以查看readBytes底层方法。
             while ((b = bin.read()) != -1) {
@@ -151,11 +151,5 @@ class UnifiedExceptionHandlingApplicationTests {
         } catch (IOException e) {
             log.error("程序发生异常，异常详细信息为：", e);
         }
-    }
-
-    @Test
-    @DisplayName("测试")
-    void testCustomAopException() {
-
     }
 }
